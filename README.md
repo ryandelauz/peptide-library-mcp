@@ -66,6 +66,12 @@ Where your plan or workspace allows custom MCP servers: Plugins → **+** → **
 
 `.vscode/mcp.json`: [examples/vscode-mcp.json](examples/vscode-mcp.json)
 
+### Cline
+
+Cline → MCP Servers → Configure MCP Servers, then add the entry from [llms-install.md](llms-install.md)
+(`"type": "streamableHttp"`, `"url": "https://peptidelibrary.app/mcp"`). Agents installing the server can
+follow that file directly.
+
 ### Any MCP client
 
 Streamable HTTP at `https://peptidelibrary.app/mcp`, no authentication. Generic config: [examples/mcp.json](examples/mcp.json).

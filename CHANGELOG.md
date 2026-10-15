@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 (2026-10-15)
+
+- `search_research`: results no longer carry a `pro_only` flag, and premium courses are left out (free content only).
+
 ## 1.0.0 (2026-10)
 
 First public release of the hosted server at `https://peptidelibrary.app/mcp`.

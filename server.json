@@ -3,7 +3,7 @@
   "name": "app.peptidelibrary/peptide-library",
   "title": "Peptide Library",
   "description": "Peptide research profiles, evidence by tier, comparisons and educational content. No dosing.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://peptidelibrary.app/developers/mcp",
   "repository": {
     "url": "https://github.com/ryandelauz/peptide-library-mcp",

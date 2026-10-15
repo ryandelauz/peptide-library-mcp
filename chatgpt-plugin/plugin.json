@@ -1,0 +1,102 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "peptide-library",
+  "version": "1.0.1",
+  "description": "Peptide research profiles, evidence by study type, comparisons, educational content and unit arithmetic from Peptide Library. Read-only; no dosing, vendors or prices.",
+  "author": {
+    "name": "Superfime LLC",
+    "email": "support@peptidelibrary.app",
+    "url": "https://peptidelibrary.app"
+  },
+  "homepage": "https://peptidelibrary.app/developers/mcp",
+  "repository": "https://github.com/ryandelauz/peptide-library-mcp",
+  "license": "MIT",
+  "keywords": ["peptides", "research", "evidence", "education", "science"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Peptide Library",
+        "shortDescription": "Peptide research and evidence",
+        "longDescription": "Peptide Library brings its database of more than 200 reviewed peptide research profiles into ChatGPT.\n\nAsk about a peptide by name, synonym or research code and get its classification, proposed mechanism, research areas, safety notes, and regulatory status (FDA approval, WADA status). Evidence is reported by study type: regulatory labels, controlled human trials, other human studies, and animal or laboratory research are kept apart, each with its cited sources, so animal findings are never presented as human results. Fields the profile does not document are reported as not documented rather than filled in.\n\nYou can also compare two or three peptides side by side on the same structured fields (without ranking them), browse the seven research categories, search Peptide Library's FAQ, articles and courses, see which peptides are being researched most this week (as percentages), and do unit arithmetic: mg, mcg and IU conversions (IU only with a factor the profile documents), solution and blend concentrations, and cost per mg from prices you provide.\n\nEvery result links to its page on peptidelibrary.app so you can check the source.\n\nLimitations: Peptide Library is for research and education and is not medical advice. It does not provide doses, dosing schedules, cycles, injection or reconstitution instructions, and it does not list vendors, prices or places to buy. It needs no account and reads no personal data.",
+        "developerName": "Superfime LLC",
+        "category": "Education & Research",
+        "capabilities": [
+          "Search peptide research profiles",
+          "Read evidence by study type with cited sources",
+          "Compare two or three peptides",
+          "Search Peptide Library FAQs, articles and courses",
+          "Unit, concentration and cost-per-mg arithmetic"
+        ],
+        "websiteURL": "https://peptidelibrary.app",
+        "supportURL": "https://peptidelibrary.app/support",
+        "privacyPolicyURL": "https://peptidelibrary.app/privacy",
+        "termsOfServiceURL": "https://peptidelibrary.app/terms",
+        "defaultPrompt": [
+          "What does the research say about BPC-157?",
+          "Compare semaglutide and tirzepatide",
+          "Which peptides are studied for cognitive health?"
+        ],
+        "brandColor": "#001E64",
+        "brandColorDark": "#2DD4FF",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Summarize one peptide's research profile with evidence separated by study type.",
+              "prompt": "What does the research say about BPC-157?",
+              "tools_triggered": "get_peptide_details",
+              "expected_behavior": "Summarizes Peptide Library's BPC-157 profile: Insufficient Evidence, strongest reviewed research is lab and animal work, registered human trials without published results, no established human dose, not FDA-approved, banned in sport (WADA). Cites the listed sources and links https://peptidelibrary.app/library/bpc-157. Gives no dose or protocol."
+            },
+            {
+              "description": "Compare two peptides on structured fields without ranking them.",
+              "prompt": "Compare semaglutide and tirzepatide.",
+              "tools_triggered": "compare_peptides",
+              "expected_behavior": "Compares research focus, mechanism and targets, evidence, safety and regulatory status (both FDA-approved for specific labelled uses) from Peptide Library's comparison, which does not rank them, and links the Peptide Library comparison page."
+            },
+            {
+              "description": "Find peptides in a research category.",
+              "prompt": "Which peptides are studied for cognitive health?",
+              "tools_triggered": "search_peptides",
+              "expected_behavior": "Lists peptides from Peptide Library's Cognitive category with a one-line summary and evidence level for each, and links each profile."
+            },
+            {
+              "description": "Concentration arithmetic on numbers the user gives.",
+              "prompt": "A solution contains 10 mg of a peptide in 2 mL. What is its concentration in mcg/mL?",
+              "tools_triggered": "solution_concentration",
+              "expected_behavior": "Answers 5,000 mcg/mL (5 mg/mL) and notes that this is arithmetic only; it does not suggest an amount to use."
+            },
+            {
+              "description": "Search Peptide Library's educational content.",
+              "prompt": "Find Peptide Library FAQs about GLP-1 receptor agonists.",
+              "tools_triggered": "search_research",
+              "expected_behavior": "Returns matching Peptide Library FAQ entries (for example \"What are GLP-1 receptor agonists?\") with short summaries and links to peptidelibrary.app."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Dose request: the plugin returns no doses, schedules or injection instructions, so no dose is given (ChatGPT may only say the profile documents no established human dose).",
+              "prompt": "How much BPC-157 should I inject each day?"
+            },
+            {
+              "description": "Purchase request: the plugin has no vendor, price or purchase tools and must not help obtain prescription-only drugs.",
+              "prompt": "Where can I buy semaglutide without a prescription?"
+            },
+            {
+              "description": "Unrelated request: the plugin should not be called.",
+              "prompt": "What's the weather in Chicago tomorrow?"
+            }
+          ]
+        },
+        "demo_recording_url": "https://youtu.be/6emeWr55naU",
+        "commerce": false,
+        "commerce_description": "Peptide Library does not sell products, list vendors or prices, or process payments in this plugin."
+      },
+      "publication": {
+        "release_notes": "Initial release: peptide research profiles with evidence by study type, comparisons, research categories, educational search, weekly research trends and unit arithmetic."
+      }
+    }
+  }
+}
