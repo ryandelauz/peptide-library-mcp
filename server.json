@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "app.peptidelibrary/peptide-library",
+  "title": "Peptide Library",
+  "description": "Peptide research profiles, evidence by tier, comparisons and educational content. No dosing.",
+  "version": "1.0.0",
+  "websiteUrl": "https://peptidelibrary.app/developers/mcp",
+  "repository": {
+    "url": "https://github.com/ryandelauz/peptide-library-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://peptidelibrary.app/assets/peptide-library-logo-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://peptidelibrary.app/mcp"
+    }
+  ]
+}
