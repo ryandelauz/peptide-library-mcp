@@ -105,9 +105,14 @@ No account and no personal data. Peptide Library keeps daily counts of requests,
 
 Profiles follow Peptide Library's [editorial policy](https://peptidelibrary.app/editorial-policy) and [methodology](https://peptidelibrary.app/methodology): claims cite PubMed, DOI, trial registries and FDA or WADA records, and evidence is labelled by kind.
 
+## REST API
+
+The same research data (plus the vendor directory and prices, with a free key) is available as a REST API for apps and scripts: `https://api.peptidelibrary.app/v1`, with an OpenAPI 3.1 spec, Postman collection and TypeScript and Python SDKs. Docs: https://peptidelibrary.app/developers · Repo: https://github.com/ryandelauz/peptide-library-api
+
 ## Links
 
 - Website: https://peptidelibrary.app
+- Developer API: https://peptidelibrary.app/developers
 - iOS app: https://apps.apple.com/us/app/peptide-library-peptide-log/id6755092737
 - Android app: https://play.google.com/store/apps/details?id=com.peptidelibrary.app
 - Support: https://peptidelibrary.app/support · support@peptidelibrary.app
