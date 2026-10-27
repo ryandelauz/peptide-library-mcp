@@ -3,6 +3,7 @@
 ## 1.0.1 (2026-10-15)
 
 - `search_research`: results no longer carry a `pro_only` flag, and premium courses are left out (free content only).
+- Added root `gemini-extension.json` for Gemini CLI extension gallery discovery (remote MCP at `https://peptidelibrary.app/mcp`).
 
 ## 1.0.0 (2026-10)
 
