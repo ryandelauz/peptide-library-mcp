@@ -1,7 +1,7 @@
 {
   "name": "peptide-library",
-  "version": "1.0.1",
-  "description": "Peptide research profiles, evidence by study type, comparisons, educational content and unit arithmetic from Peptide Library. Read-only; no dosing, vendors or prices.",
+  "version": "1.1.0",
+  "description": "Peptide research profiles, evidence by study type, human evidence quality, comparisons, educational content and unit arithmetic from Peptide Library. Read-only; no dosing, vendors or prices.",
   "mcpServers": {
     "peptide-library": {
       "httpUrl": "https://peptidelibrary.app/mcp"

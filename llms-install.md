@@ -35,9 +35,17 @@ Any client that supports remote MCP servers uses the same URL:
 { "mcpServers": { "peptide-library": { "url": "https://peptidelibrary.app/mcp" } } }
 ```
 
+## Agent Skills
+
+Agents that support [Agent Skills](https://agentskills.io) can also install the two skills in this repository, which tell the agent when and how to use the server (and fall back to the REST API without it):
+
+```bash
+npx skills add ryandelauz/peptide-library-mcp
+```
+
 ## Check that it works
 
-1. The server should list 10 tools, including `search_peptides`, `get_peptide_details` and
+1. The server should list 12 tools, including `search_peptides`, `get_peptide_details` and
    `compare_peptides`.
 2. Ask: "What does the research say about BPC-157?" The answer should come from `get_peptide_details` and
    link to `https://peptidelibrary.app/library/bpc-157`.

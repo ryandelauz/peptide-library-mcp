@@ -1,0 +1,10 @@
+{
+  "name": "peptide-library",
+  "version": "1.1.0",
+  "description": "Peptide Library research for Claude Code: the remote, read-only Peptide Library MCP server plus two Agent Skills (peptide-library-research, peptide-evidence-analyzer). Cited peptide research profiles, human vs preclinical evidence, evidence quality, FDA/WADA status and comparisons. No dosing, vendors or prices.",
+  "author": { "name": "Peptide Library", "email": "support@peptidelibrary.app", "url": "https://peptidelibrary.app" },
+  "homepage": "https://peptidelibrary.app/developers/mcp",
+  "repository": "https://github.com/ryandelauz/peptide-library-mcp",
+  "license": "MIT",
+  "keywords": ["peptides", "research", "evidence", "clinical-trials", "pubmed", "mcp", "agent-skills"]
+}

@@ -1,9 +1,16 @@
 # Changelog
 
+## 1.1.0 (2026-11-07)
+
+- Agent Skills: `skills/peptide-library-research` (moved from the root `SKILL.md`, now listing every tool) and the new `skills/peptide-evidence-analyzer`. Install with `npx skills add ryandelauz/peptide-library-mcp`.
+- Claude Code plugin marketplace (`.claude-plugin/`, `.mcp.json`): the server and both skills in one install.
+- `gemini-extension.json` and `server.json` at 1.1.0. README: Codex, Windsurf and Gemini CLI setup, evidence standards, listings.
+- New tools `get_evidence_summary` and `get_human_study`: published Human Evidence Quality assessments (GRADE certainty per outcome, risk of bias, reviewed human studies), with links to every assessment. Claims not yet assessed say so; no dose figures or administration details.
+
 ## 1.0.1 (2026-10-15)
 
-- `search_research`: results no longer carry a `pro_only` flag, and premium courses are left out (free content only).
 - Added root `gemini-extension.json` for Gemini CLI extension gallery discovery (remote MCP at `https://peptidelibrary.app/mcp`).
+- `search_research`: results no longer carry a `pro_only` flag, and premium courses are left out (free content only).
 
 ## 1.0.0 (2026-10)
 

@@ -1,6 +1,8 @@
 ---
 name: peptide-research
 description: Answer questions about peptide research with Peptide Library's tools. Use it for what a peptide is, how it is thought to work, what kind of evidence exists, its regulatory status, comparisons between two or three peptides, research categories, educational articles, and unit or concentration arithmetic.
+metadata:
+  internal: "true"
 ---
 
 # Peptide research with Peptide Library

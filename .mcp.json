@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "peptide-library": {
+      "type": "http",
+      "url": "https://peptidelibrary.app/mcp"
+    }
+  }
+}

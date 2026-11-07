@@ -13,7 +13,7 @@ curl -s https://peptidelibrary.app/mcp/health
 
 What to check:
 
-- `tools/list` returns 10 tools, all `readOnlyHint: true`, and `--strict` reports no schema problems.
+- `tools/list` returns 12 tools, all `readOnlyHint: true`, and `--strict` reports no schema problems.
 - Results include a `peptidelibrary.app` URL, `source`, `disclaimer` and `retrieved_at`.
 - No result contains a dose, regimen, vendor or price.
 - An unknown peptide returns a `not_found` error with suggestions, not invented data.
